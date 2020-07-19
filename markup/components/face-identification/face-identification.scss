@@ -1,0 +1,25 @@
+.face-identification {
+    &__container {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-align: center;
+        @include mq($small) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        text-align: left;
+        @include mq($small) {
+            font-size: 38px;
+        }
+    }
+
+    &__image {
+
+    }
+}

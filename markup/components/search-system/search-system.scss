@@ -1,0 +1,48 @@
+.search-system {
+    &__container {
+        text-align: center;
+        @include mq($small) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 30px;
+        text-align: left;
+        @include mq($small) {
+            font-size: 35px;
+        }
+    }
+
+    &__image {
+
+    }
+
+    &__text {
+        margin-top: 4px;
+        text-align: left;
+        letter-spacing: 0.2px;
+        @include mq($small) {
+            font-size: 25px;
+        }
+    }
+
+    &__table-w {
+        margin-bottom: 40px;
+        overflow-x: auto;
+        @include mq($small) {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__table {
+        @include mq($small) {
+            margin-top: 50px;
+        }
+
+    }
+
+}

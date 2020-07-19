@@ -1,0 +1,164 @@
+.about {
+    overflow: hidden;
+    &__container {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        @include mq($small) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+        }
+    }
+    &__entry {
+        // margin-left: 28px;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        font-size: 18px;
+        line-height: 1.2;
+        @include mq($small) {
+            font-size: 25px;
+
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        // letter-spacing: 0.8px;
+
+    }
+
+    &__row {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        @include mq($small) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__image {
+        order: 1;
+        width: 100%;
+        @include mq($small) {
+            margin-top: 100px;
+            margin-left: 13px;
+            order: 0;
+            max-width: 34%;
+        }
+    }
+
+    &__list {
+        @include resetlist;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        max-width: 100%;
+        width: 100%;
+        font-weight: 500;
+        font-size: 21px;
+        @include mq($small) {
+            margin-right: -30px;
+            margin-bottom: 0;
+            padding-left: 117px;
+            max-width: 66%;
+        }
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: 46px;
+        padding-bottom: 8px;
+        @include mq($small) {
+            padding-left: 10px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:after,
+        &:before {
+            position: absolute;
+            top: 100%;
+            content: "";
+            // display: none;
+            @include mq($small) {
+                // display: block;
+            }
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            left: -240px;
+            @include bg($list-item-lines);
+            @include mq($small) {
+                left: 0;
+            }
+        }
+        &:before {
+            display: none;
+            @include bg($list-item);
+            @include mq($small) {
+                top: calc(100% - 10px);
+                left: -110px;
+                display: block;
+            }
+        }
+
+        &:nth-child(2) {
+            @include mq($small) {
+                margin-left: 20px;
+
+            }
+            &:before {
+                @include mq($small) {
+                    left: -100px;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            @include mq($small) {
+                margin-left: 40px;
+            }
+            &:before {
+                left: -90px;
+            }
+        }
+
+        &:nth-child(4) {
+            @include mq($small) {
+                margin-left: 60px;
+            }
+            &:before {
+                left: -80px;
+            }
+        }
+
+        &:nth-child(5) {
+            @include mq($small) {
+                margin-left: 40px;
+            }
+            &:before {
+                left: -90px;
+            }
+        }
+
+        &:nth-child(6) {
+            @include mq($small) {
+                margin-left: 20px;
+            }
+            &:before {
+                left: -100px;
+            }
+        }
+
+        // &:nth-child(7) {
+        //     margin-left: 120px;
+        // }
+
+    }
+
+}

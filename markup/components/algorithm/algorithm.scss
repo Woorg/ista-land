@@ -1,0 +1,109 @@
+.algorithm {
+
+    &__container {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        @include mq($small) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        @include resetlist;
+        flex-wrap: wrap;
+        counter-reset: num;
+
+        @include mq($small) {
+            margin-left: 10px;
+            flex-wrap: nowrap;
+
+        }
+
+    }
+
+    &__item {
+        position: relative;
+        border-left: 1px solid #505457;
+        max-width: 100%;
+        width: 100%;
+        min-height: 240px;
+        align-items: center;
+        counter-increment: num;
+        @include mq($small) {
+            border-left: none;
+            border-right: 1px solid #505457;
+            max-width: 25%;
+            min-height: 278px;
+        }
+        &:after,
+        &:before {
+            position: absolute;
+            content: "";
+
+        }
+        &:after {
+            top: 50%;
+            right: -30px;
+            @include bg($arrow);
+            background-color: #FFF;
+            display: none;
+            transform: translateY(-50%);
+            @include mq($small) {
+                display: block;
+            }
+        }
+        &:before {
+            top: -25px;
+            right: 20px;
+            content: counter(num);
+            color: #DCDEDE;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 1;
+            @include mq($small) {
+                font-size: 100px;
+
+            }
+        }
+        &:first-child {
+            border-left: 1px solid #505457;
+            .algorithm__text {
+                padding-left: 20px;
+            }
+        }
+        &:last-child {
+            &:after {
+
+                @include mq($small) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__text {
+        padding-right: 20px;
+        padding-left: 20px;
+        font-size: 19px;
+        line-height: 1.3;
+        @include mq($small) {
+            padding-left: 40px;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
